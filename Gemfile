@@ -5,6 +5,12 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
+# Конвертирует Less в Sass и делает все необходимые файлы Bootstrap доступными для текущего приложения
+gem 'bootstrap-sass', '2.3.2' 
+# bootstrap-will_paginate, настраивает will_paginate на использование пагинационных стилей Bootstrap’а
+gem 'will_paginate',           '~> 3.1.0'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'sprockets', '3.7.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '1.4.2'
 # Use Puma as the app server
@@ -21,6 +27,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'bcrypt'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
