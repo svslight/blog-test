@@ -6,7 +6,7 @@
 
 $gray-medium-light: #eaeaea;
 
-/* universal */   
+/* universal */
 
 body {
   padding-top: 60px;
@@ -20,6 +20,7 @@ textarea {
   resize: vertical;
 }
 
+/*Вложенное правило h1 автоматически наследует содержимое .center*/
 .center {
   text-align: center;
   h1 {
@@ -47,7 +48,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #008B8B;
+  color: #008B8B;  /*Встроенное название цветов благодаря гему bootstrap-sass */
 }
 
 p {
@@ -57,32 +58,47 @@ p {
 
 /* header */
 
+/* Знак решётки # привязывает правило к CSS-id 
+   Это означает, что элементы внутри любого тега(такого как div)с классом center будут отцентрированы на странице.
+   Sass заменяет &:hover на #logo:hover при конвертации из SCSS в CSS.*/
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #008B8B;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: bold;  
   &:hover {
-    color: #008B8B;
+    color: green;
     text-decoration: none;
   }
+
 }
 
-/* forms */
-
-#error_explanation {
-  color: green;
+header {
+  
   ul {
-    color: green;
-    margin: 0 0 30px 0;
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+      text-align: center;
+    }    
+  }
+  a {
+    color: white;
+    font-weight: normal;
+    &:hover {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 }
-
-
 
 /* footer */
 
@@ -95,6 +111,9 @@ footer {
     color: #006400;
     &:hover {
       color: #008B8B;
+      text-decoration: none;
+      background-color: white;
+      font-weight: bold;
     }
   }
   small {
@@ -108,6 +127,30 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* forms */
+
+#error_explanation {
+  color: green;
+  ul {
+    color: green;
+    margin: 0 0 30px 0;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 /* sidebar */

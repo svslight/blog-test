@@ -5,34 +5,49 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
+
 # Конвертирует Less в Sass и делает все необходимые файлы Bootstrap доступными для текущего приложения
-gem 'bootstrap-sass', '2.3.2' 
+# gem 'bootstrap-sass', '2.3.2' 
+gem 'bootstrap-sass', '~> 3.3.6'
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails'
+
+# gem 'autoprefixer-rails'
+
 # bootstrap-will_paginate, настраивает will_paginate на использование пагинационных стилей Bootstrap’а
 gem 'will_paginate',           '~> 3.1.0'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'sprockets', '3.7.2'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '1.4.2'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'duktape'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
+# gem 'jquery-rails', '4.3.5'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use ActiveModel has_secure_password
 gem 'bcrypt'
+gem 'faker'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
