@@ -1,4 +1,4 @@
-<!--Партиал для формы new и edit-->
+<!--Партиал для формы new(Sign up) и edit-->
 <%= form_with(model: user, local: true) do |form| %>
 
   <%= render 'shared/error_messages' %>
@@ -22,8 +22,8 @@
     <%= form.label :password_confirmation, "Confirmation" %>
     <%= form.password_field :password_confirmation, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit "Сохранить", class: "btn btn-primary" %>
+    <%= form.submit yield(:button_text), class: "btn btn-primary" %>
   </div>
 <% end %>
